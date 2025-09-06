@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>CRUD Application | Users</title>
+</head>
+<body>
+    <main class="container">
+        <section>
+            <h1>USERS</h1>
+            <div>
+                <button type="button" id="getUsersButton" class="users__application-button">DISPLAY USERS LIST</button>
+                <button type="button" id="addUserButton" class="users__application-button">ADD USER</button>
+            </div>
+
+
+            <table id="userslist__table">
+                <thead id="userslist__table--head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                        <th>City</th>
+                        <th>Website</th>
+                        <th>Company</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userslist__table--body"></tbody>
+            </table>
+        </section>
+
+
+        <section>
+            <dialog id="addUserDialog">
+                <h3>Add User</h3>
+                <form action="" method="post" id="addUserForm">
+                    <label for="userName">Name <span id="required--star">&starf;</span> <br>
+                        <input type="text" name="userName" id="userName" required/>
+                    </label>
+                    
+                    <br><br>
+
+                    <label for="userEmail">Email <span id="required--star">&starf;</span> <br>
+                        <input type="email" name="userEmail" id="userEmail" required/>
+                    </label>
+
+                    <br><br>
+
+                    <label for="mobileNumber">Mobile Number <br>
+                        <input type="tel" name="mobileNumber" id="mobileNumber" min="0" max="9" maxlength="12" />
+                    </label>
+
+                    <br><br>
+
+                    <label for="userCity">City <br>
+                        <input type="text" name="userCity" id="userCity" />
+                    </label>
+
+                    <br><br>
+
+                    <label for="userWebsite">Website <br>
+                        <input type="text" name="userWebsite" id="userWebsite" />
+                    </label>
+
+                    <br><br>
+
+                    <label for="userCompany">Company <span id="required--star">&starf;</span> <br>
+                        <input type="text" name="userCompany" id="userCompany" required/>
+                    </label>
+
+                    <br><br>
+
+                    <button type="button" id="saveUserButton">Save</button> 
+                    <button type="button" id="updateUserButton">Update</button> 
+                    <button type="button" id="cancelButton">Cancel</button>
+
+                </form>
+            </dialog>
+        </section>
+    </main>
+
+    <footer id="user__footer">
+        <p>&copy; copyright 2025</p>
+        <p>
+            <strong>Note :</strong>
+            <em>This is a fake API used for Practice, so resource will not really effect the server.</em>
+        </p>
+    </footer>
+
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
