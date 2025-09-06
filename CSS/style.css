@@ -1,1 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root{
+    --body-background-color : #F5C9B0;
+    --background-color : #1C352D;
+    --background-color-light-shade : #A6B28B;
+    --green-color-shade : #295F50;
+    --red-color-shade: #E50046;
+    --white-color : #FFFFFF;
+    --white-color-shade : #F9F6F3;
+    --box-shadow-color : #00000012;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--body-background-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace;
+}
+
+button, input{
+    border: none;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace;
+    transition: box-shadow 0.2s ease-in-out,
+                scale 0.2s ease-in-out;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 0 0.2rem var(--white-color-shade) inset;
+    scale: 1.02;
+}
+
+table, table thead tr, table thead tr th, table tbody tr, table tbody td{
+    border: 0.2rem solid var(--white-color);
+    border-collapse: collapse;
+}
+
+table thead tr, table thead tr th, table tbody tr, table tbody td{
+    padding: 1rem;
+}
+
+main.container{
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+}
+
+
+main.container h1{
+    text-align: center;
+    font-size: 3rem;
+    box-shadow: 0 0 0.6rem 0 var(--box-shadow-color);
+}
+
+main.container div button{
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--background-color);
+    color: var(--white-color);
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+    box-shadow: 0 0 0.6rem 0 var(--box-shadow-color);
+    margin-block: 2rem;
+    width: 49%;
+    margin-inline: 0.4%;
+}
+
+main.container div button:hover{
+    box-shadow: 0 0 0 0.2rem var(--white-color-shade) inset;
+    scale: 1.02;
+}
+
+table{
+    border:none;
+    display: none;
+    width: auto;
+}
+
+table thead tr th{
+    font-size: 2rem;
+    background-color: var(--background-color);
+    color: var(--white-color);
+}
+
+
+table tbody tr{
+    background-color: var(--background-color-light-shade);
+    color: var(--background-color);
+    transition: background-color 0.2s ease-in-out;
+}
+
+table tbody tr td{
+    font-size: 1.8rem;
+}
+
+table tbody tr td button{
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--white-color);
+    border-radius: 0.4rem;
+}
+
+table tbody tr td button#updateUsersButton{
+    background-color: var(--green-color-shade);
+}
+
+table tbody tr td button#deleteUsersButton{
+    background-color: var(--red-color-shade);
+}
+
+#addUserDialog, #addUserForm{
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+}
+
+#addUserDialog h3{
+    font-size: 3rem;
+    color: var(--background-color);
+    text-align: center;
+    box-shadow: 0 0 0 0.2rem var(--box-shadow-color);
+    margin-block: 4rem;
+    width: 80%;
+    margin-inline: auto;
+}
+
+#addUserForm label{
+    font-size: 2rem;
+    color: var(--background-color);
+}
+
+span#required--star{
+    color: var(--red-color-shade);
+}
+
+#addUserForm input{
+    width: 100%;
+    background-color: var(--white-color-shade);
+    font-size: 2rem;
+    margin-block: 1rem;
+    padding: 1rem;
+}
+
+button#saveUserButton, button#updateUserButton, button#cancelButton{
+    width: 49.6%;
+    color: var(--white-color);
+    font-size: 2rem;
+    border-radius: 0.2rem;
+    padding-block: 1rem;
+}
+
+button#saveUserButton, button#updateUserButton{
+    background-color: var(--green-color-shade);
+}
+
+button#cancelButton{
+    background-color: var(--red-color-shade);
+}
+
+#user__footer{
+    display: none;
+    background-color: var(--green-color-shade);
+}
+
+#user__footer p{
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 0.4rem;
+}
+
+
+/* Media Querries */
+
+@media (max-width : 600px) {
+
+    main.container div button, button#saveUserButton, button#updateUserButton, button#cancelButton{
+        width: 100%;
+        margin-block: 0.2rem;
+    }
+
+}
